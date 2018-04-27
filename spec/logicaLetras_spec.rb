@@ -20,6 +20,17 @@ describe Logica do
 		#Assert
 		expect(result).to eq "XXXX"
 	end
+
+		it "Como un niño jugador ingreso c" do
+		#Arranlge
+		obj = Logica.new
+		#Act	
+		
+		result = obj.validar "a"
+		result = obj.validar "t"
+		#Assert
+		expect(result).to eq "XatX"
+	end	
 end
 
 

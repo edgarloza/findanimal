@@ -2,25 +2,18 @@ class Logica
 	ANIMALES = ["gato"]
 	
 	def initialize 
-		arrayPalabras = []
+		@palabra = "X"*ANIMALES[0].split('').size
 	end
 
 	def validar letra
 		arrayobj = ANIMALES[0].split('')
-        #Obtener palabras
-        palabra = ''
-        arrayobj.each do |letraAni|
-         	if letra == letraAni
-         		palabra += letra
-         	else
-         		palabra += 'X'
-         	end
-        end
-        palabra
-        #arrayPalabras.push(palabra)
-        #arrayPalabras.each do |pal|
-        #	print pal
-        #end 
-	end
 
+        
+        arrayobj.each_with_index do |letraAni,index|
+         	if letra == letraAni
+         		@palabra[index]= letra
+         	end	
+        end
+        @palabra 
+	end
 end
