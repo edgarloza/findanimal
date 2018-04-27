@@ -6,5 +6,5 @@ get '/' do
 end
 
 post '/juego' do
-	
+	erb(:juego)
 end
